@@ -25,8 +25,9 @@ app.post("/create-post", function(req, res) {
   fs.readFile(__dirname + '/data/posts.json', function (error, file) {
       var parsedFile = JSON.parse(file);
       parsedFile[Date.now()] = req.body['blogpost'];
+      var newPost = JSON.stringify(parsedFile);
 
-  fs.writeFile(__dirname + '/data/posts.json', JSON.stringify(parsedFile), function(error, file){
+  fs.writeFile(__dirname + '/data/posts.json', newPost, function(error, file){
     console.log(error);
   });
       res.redirect('/home');
@@ -34,7 +35,7 @@ app.post("/create-post", function(req, res) {
 });
 
 // app.post("/create-post", function(req, res) {
-//   fs.appendFile(__dirname + '/data/posts.json', function (error, file) {
+//   fs.appendFile(__dirname + '/data/posts.json', blogpost function (error, file) {
 //     console.log(file);
 //   res.redirect("/home");
 // });

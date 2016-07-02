@@ -1,0 +1,27 @@
+{
+  "name": "express-workshop",
+  "version": "1.0.0",
+  "description": "basic CMS built in express",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trcywu/express-workshop.git"
+  },
+  "keywords": [
+    "express",
+    "cms"
+  ],
+  "author": "trcywu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trcywu/express-workshop/issues"
+  },
+  "homepage": "https://github.com/trcywu/express-workshop#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  }
+}
